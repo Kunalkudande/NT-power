@@ -21,7 +21,7 @@ export const fetchProducts = async () => {
       });
     return response.data;
   } catch (error: any) {
-    console.error("Error fetching products from WooCommerce:", error.response?.data || error.message);
+    console.error("Fout bij het ophalen van producten uit WooCommerce:", error.response?.data || error.message);
     throw error;
   }
 };

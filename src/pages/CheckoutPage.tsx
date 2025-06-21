@@ -131,13 +131,13 @@ const CheckoutPage: React.FC = () => {
     <>
       <Header />
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">Checkout</h1>
+        <h1 className="text-3xl font-bold mb-8">Afrekenen</h1> {/* Checkout */}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Checkout Form */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-6">Shipping & Billing Details</h2>
+              <h2 className="text-xl font-semibold mb-6">Verzend- & Facturatiegegevens</h2> {/* Shipping & Billing Details */}
 
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -146,7 +146,7 @@ const CheckoutPage: React.FC = () => {
                       key={field}
                       type="text"
                       name={field}
-                      placeholder={field === "firstName" ? "First Name" : "Last Name"}
+                      placeholder={field === "firstName" ? "Voornaam" : "Achternaam"} // First Name / Last Name
                       value={(formData as any)[field]}
                       onChange={handleChange}
                       required
@@ -161,7 +161,7 @@ const CheckoutPage: React.FC = () => {
                       key={field}
                       type="text"
                       name={field}
-                      placeholder={field === "address1" ? "Address Line 1" : "Address Line 2"}
+                      placeholder={field === "address1" ? "Adresregel 1" : "Adresregel 2"} // Address Line 1 / 2
                       value={(formData as any)[field]}
                       onChange={handleChange}
                       className="border p-2 rounded w-full"
@@ -176,7 +176,7 @@ const CheckoutPage: React.FC = () => {
                       key={field}
                       type="text"
                       name={field}
-                      placeholder={field === "city" ? "City" : "State"}
+                      placeholder={field === "city" ? "Stad" : "Provincie"} // City / State
                       value={(formData as any)[field]}
                       onChange={handleChange}
                       required
@@ -217,7 +217,7 @@ const CheckoutPage: React.FC = () => {
                       key={field}
                       type={field === "email" ? "email" : "tel"}
                       name={field}
-                      placeholder={field === "email" ? "Email" : "Phone Number"}
+                      placeholder={field === "email" ? "E-mailadres" : "Telefoonnummer"} // Email / Phone Number
                       value={(formData as any)[field]}
                       onChange={handleChange}
                       required
@@ -231,7 +231,7 @@ const CheckoutPage: React.FC = () => {
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 text-white py-3 px-4 rounded hover:bg-blue-700 transition-colors disabled:opacity-50"
                 >
-                  {isSubmitting ? "Processing..." : "Proceed to Payment"}
+                  {isSubmitting ? "Bezig met verwerken..." : "Verder naar betaling"} {/* Processing... / Proceed to Payment */}
                 </button>
               </form>
             </div>
@@ -240,7 +240,7 @@ const CheckoutPage: React.FC = () => {
           {/* Order Summary */}
           <div>
             <div className="bg-white rounded-lg shadow-md p-6 sticky top-24">
-              <h2 className="text-xl font-semibold mb-6">Order Summary</h2>
+              <h2 className="text-xl font-semibold mb-6">Besteloverzicht</h2> {/* Order Summary */}
 
               <div className="space-y-4">
                 {cartItems.map((item) => (
@@ -254,19 +254,19 @@ const CheckoutPage: React.FC = () => {
 
                 <div className="border-t border-gray-200 pt-4 mt-4">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Subtotal</span>
+                    <span className="text-gray-600">Subtotaal</span> {/* Subtotal */}
                     <span>€{cartTotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Shipping</span>
+                    <span className="text-gray-600">Verzendkosten</span> {/* Shipping */}
                     <span>€{totalShippingCost.toFixed(2)}</span>
                   </div>
                   <div className="border-t border-gray-200 pt-4 mt-4">
                     <div className="flex justify-between font-bold">
-                      <span>Total</span>
+                      <span>Totaal</span> {/* Total */}
                       <span>€{(cartTotal + totalShippingCost).toFixed(2)}</span>
                     </div>
-                    <p className="text-gray-500 text-sm mt-1">Including taxes</p>
+                    <p className="text-gray-500 text-sm mt-1">Inclusief btw</p> {/* Including taxes */}
                   </div>
                 </div>
               </div>
@@ -275,7 +275,7 @@ const CheckoutPage: React.FC = () => {
                 onClick={() => clearCart()}
                 className="w-full bg-red-600 text-white py-3 px-4 rounded mt-4 hover:bg-red-700"
               >
-                Clear Cart
+                Winkelwagen leegmaken {/* Clear Cart */}
               </button>
             </div>
           </div>

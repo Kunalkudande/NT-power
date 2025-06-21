@@ -22,7 +22,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {
-    throw new Error('useCart must be used within a CartProvider');
+    throw new Error('useCart moet worden gebruikt binnen een CartProvider');
   }
   return context;
 };

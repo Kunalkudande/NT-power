@@ -8,118 +8,115 @@ const TermsAndConditions: React.FC = () => {
       <Header />
       <div className="container mx-auto p-8 pt-24 max-w-4xl bg-white shadow-md rounded-lg">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
-          <h1 className="text-3xl font-bold mb-8">Terms and Conditions</h1>
+          <h1 className="text-3xl font-bold mb-8">Algemene Voorwaarden</h1>
           
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">I. General</h2>
+            <h2 className="text-2xl font-semibold mb-4">I. Algemeen</h2>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
-                Access to this website is subject to these "Terms and Conditions" (hereinafter referred to as "the Terms"). Please read these Terms carefully before using this website. By using this website, you declare that you have read and accepted the Terms. If you do not accept one or more of the Terms, you should not use this website.
+                Toegang tot deze website is onderworpen aan deze "Algemene Voorwaarden" (hierna te noemen "de Voorwaarden"). Lees deze Voorwaarden zorgvuldig door voordat u deze website gebruikt. Door deze website te gebruiken, verklaart u dat u de Voorwaarden hebt gelezen en geaccepteerd. Indien u één of meer Voorwaarden niet accepteert, dient u deze website niet te gebruiken.
               </li>
               <li>
-                This website is operated by NT-One, a private limited liability company located in the Netherlands (hereinafter referred to as "Naman Technologies").
+                Deze website wordt beheerd door NT-One, een besloten vennootschap met beperkte aansprakelijkheid gevestigd in Nederland (hierna te noemen "Naman Technologies").
               </li>
-              {/* <li>
-                "Content" of this website includes, but is not limited to: text, graphics, audio and underlying source/object code (such as, but not limited to, HTML code or JavaScript code) of this website and any part thereof.
-              </li> */}
             </ol>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">II. Permitted Uses</h2>
+            <h2 className="text-2xl font-semibold mb-4">II. Toegestaan Gebruik</h2>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
-                The user's behavior must align with what is expected of a responsible and careful website user. Users may not use the website or its Content for acts contrary to law or morality, including but not limited to:
+                Het gedrag van de gebruiker moet overeenkomen met wat wordt verwacht van een verantwoordelijke en zorgvuldige websitegebruiker. Gebruikers mogen de website of de Inhoud niet gebruiken voor handelingen die in strijd zijn met de wet of de goede zeden, waaronder maar niet beperkt tot:
                 <ul className="list-disc pl-6 mt-2 space-y-2">
-                  <li>Infringing on intellectual property rights</li>
-                  <li>Making offensive or misleading statements</li>
-                  <li>Distributing prohibited material</li>
-                  <li>Violating applicable laws</li>
-                  <li>Circumventing website security</li>
+                  <li>Schending van intellectuele eigendomsrechten</li>
+                  <li>Het maken van beledigende of misleidende uitspraken</li>
+                  <li>Verspreiden van verboden materiaal</li>
+                  <li>Schending van toepasselijke wetgeving</li>
+                  <li>Omzeilen van websitebeveiliging</li>
                 </ul>
               </li>
               <li>
-                Users may use the Content for non-commercial or personal use only. Distribution, modification, reproduction, transmission, or commercial exploitation of the Content is prohibited.
+                Gebruikers mogen de Inhoud uitsluitend gebruiken voor niet-commerciële of persoonlijke doeleinden. Verspreiding, wijziging, reproductie, overdracht of commerciële exploitatie van de Inhoud is verboden.
               </li>
               <li>
-                The Content may not be modified, copied, or reverse engineered.
+                De Inhoud mag niet worden aangepast, gekopieerd of reverse-engineered.
               </li>
               <li>
-                Any copy of the Content must contain Naman Technologies' copyright notice.
+                Elke kopie van de Inhoud moet het copyright-bericht van Naman Technologies bevatten.
               </li>
               <li>
-                Distribution or modification of graphics from this website is prohibited without express written permission.
-              </li>
-            </ol>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">III. Intellectual Property Rights</h2>
-            <ol className="list-decimal pl-6 space-y-4">
-              <li>
-                All intellectual property rights relating to the website content belong exclusively to Naman Technologies. Product names, logos, trademarks, or the Naman Technologies name designated with ® or ™ are trademarks owned or licensed by Naman Technologies.
-              </li>
-              <li>
-                The use or misuse of such trademarks or copyrighted materials is strictly prohibited except as noted above.
+                Het verspreiden of aanpassen van grafisch materiaal van deze website is verboden zonder uitdrukkelijke schriftelijke toestemming.
               </li>
             </ol>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">IV. Liability and Indemnification</h2>
+            <h2 className="text-2xl font-semibold mb-4">III. Intellectuele Eigendomsrechten</h2>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
-                The Content is provided to the best of our knowledge and belief.
+                Alle intellectuele eigendomsrechten met betrekking tot de inhoud van de website behoren exclusief toe aan Naman Technologies. Productnamen, logo’s, handelsmerken of de naam van Naman Technologies aangeduid met ® of ™ zijn handelsmerken die eigendom zijn van of in licentie zijn gegeven aan Naman Technologies.
               </li>
               <li>
-                Naman Technologies believes that links to third-party web pages are legal and consistent with usual Internet expectations. Upon written request, we will remove links to third-party websites.
-              </li>
-              <li>
-                Naman Technologies is not liable for consequential damages related to or arising from the use of the website content or linked content.
-              </li>
-              <li>
-                We do not warrant that the material is free of errors, defects, or viruses, nor do we guarantee such errors will be corrected.
-              </li>
-              <li>
-                Users shall indemnify Naman Technologies against third-party claims for breach of these Terms or claims related to website use.
+                Het gebruik of misbruik van dergelijke handelsmerken of auteursrechtelijk beschermd materiaal is strikt verboden, behalve zoals hierboven vermeld.
               </li>
             </ol>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">V. Product Information</h2>
+            <h2 className="text-2xl font-semibold mb-4">IV. Aansprakelijkheid en Vrijwaring</h2>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
-                All BMS (Battery Management System) products and related accessories are described with the utmost accuracy. However, specifications, features, and appearances may vary slightly from the descriptions provided.
+                De Inhoud wordt verstrekt naar beste weten en overtuiging.
               </li>
               <li>
-                Technical specifications and performance metrics of BMS products are provided for informational purposes and may be updated without prior notice.
+                Naman Technologies is van mening dat links naar webpagina’s van derden legaal zijn en in overeenstemming zijn met de gebruikelijke internetverwachtingen. Op schriftelijk verzoek zullen wij links naar websites van derden verwijderen.
               </li>
               <li>
-                Installation and usage of BMS products must comply with provided documentation and safety guidelines.
+                Naman Technologies is niet aansprakelijk voor gevolgschade met betrekking tot of voortvloeiend uit het gebruik van de website-inhoud of gekoppelde inhoud.
+              </li>
+              <li>
+                Wij garanderen niet dat het materiaal vrij is van fouten, gebreken of virussen, noch dat dergelijke fouten zullen worden gecorrigeerd.
+              </li>
+              <li>
+                Gebruikers vrijwaren Naman Technologies tegen claims van derden wegens schending van deze Voorwaarden of claims met betrekking tot het gebruik van de website.
               </li>
             </ol>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">VI. Warranty and Returns</h2>
+            <h2 className="text-2xl font-semibold mb-4">V. Productinformatie</h2>
             <ol className="list-decimal pl-6 space-y-4">
               <li>
-                BMS products come with a standard warranty against manufacturing defects. Specific warranty terms are provided with each product.
+                Alle BMS (Battery Management System)-producten en gerelateerde accessoires worden zo nauwkeurig mogelijk beschreven. Specificaties, kenmerken en uiterlijk kunnen echter enigszins afwijken van de verstrekte beschrijvingen.
               </li>
               <li>
-                Warranty claims must be submitted with proof of purchase and a detailed description of the issue.
+                Technische specificaties en prestatiegegevens van BMS-producten zijn uitsluitend ter informatie en kunnen zonder voorafgaande kennisgeving worden bijgewerkt.
               </li>
               <li>
-                Returns are accepted within 14 days of delivery, subject to our return policy conditions.
+                Installatie en gebruik van BMS-producten dienen in overeenstemming te zijn met de meegeleverde documentatie en veiligheidsrichtlijnen.
+              </li>
+            </ol>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">VI. Garantie en Retourneren</h2>
+            <ol className="list-decimal pl-6 space-y-4">
+              <li>
+                BMS-producten worden geleverd met een standaardgarantie tegen fabricagefouten. Specifieke garantiebepalingen worden bij elk product meegeleverd.
+              </li>
+              <li>
+                Garantieclaims moeten worden ingediend met bewijs van aankoop en een gedetailleerde beschrijving van het probleem.
+              </li>
+              <li>
+                Retourneren is toegestaan binnen 14 dagen na levering, onder voorbehoud van de voorwaarden van ons retourbeleid.
               </li>
             </ol>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">VII. Governing Law</h2>
+            <h2 className="text-2xl font-semibold mb-4">VII. Toepasselijk Recht</h2>
             <p className="mb-4">
-              These Terms are governed by Dutch law. All disputes between Naman Technologies and users will be submitted to the competent court in the Netherlands.
+              Deze Voorwaarden zijn onderworpen aan het Nederlandse recht. Alle geschillen tussen Naman Technologies en gebruikers worden voorgelegd aan de bevoegde rechtbank in Nederland.
             </p>
           </section>
         </div>

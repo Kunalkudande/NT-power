@@ -51,7 +51,6 @@ const ProductsPage: React.FC = () => {
     });
   });
 
-  // Define your preferred category order
   const preferredCategoryOrder = [
     "Active Balance BMS",
     "Accessories",
@@ -66,8 +65,8 @@ const ProductsPage: React.FC = () => {
     );
   };
 
-  if (loading) return <p className="p-4">Loading products…</p>;
-  if (error) return <p className="p-4 text-red-600">Error: {error}</p>;
+  if (loading) return <p className="p-4">Producten laden…</p>;
+  if (error) return <p className="p-4 text-red-600">Fout: {error}</p>;
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -83,7 +82,7 @@ const ProductsPage: React.FC = () => {
         </aside>
 
         <main className="w-full lg:w-3/4">
-          <h1 className="text-3xl font-bold mb-6">Our Products</h1>
+          <h1 className="text-3xl font-bold mb-6">Onze Producten</h1>
 
           {Object.entries(groupedByCategory)
             .sort(([a], [b]) => {
@@ -111,7 +110,7 @@ const ProductsPage: React.FC = () => {
 
           {Object.keys(groupedByCategory).length === 0 && (
             <p className="text-gray-500">
-              No products found for selected categories.
+              Geen producten gevonden voor de geselecteerde categorieën.
             </p>
           )}
         </main>

@@ -10,6 +10,13 @@ interface ProductCardProps {
   autoOpen?: boolean;
 }
 
+const categoryNameMap: Record<string, string> = {
+  "Accessories": "Accessoires",
+  "Active Balance BMS": "Actieve Balans BMS",
+  "Standard BMS": "Standaard BMS",
+  // Add more mappings if needed
+};
+
 const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
   const [showModal, setShowModal] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
@@ -42,7 +49,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
   };
 
   const imageSrc = images?.[0]?.src || "/placeholder.png";
-  const categoryName = categories?.[0]?.name || "Niet-gecategoriseerd";
+  const rawCategory = categories?.[0]?.name || "Niet-gecategoriseerd";
+  const categoryName = categoryNameMap[rawCategory] || rawCategory;
+
+  const formattedPrice = new Intl.NumberFormat("nl-NL", {
+    style: "currency",
+    currency: "EUR",
+  }).format(price);
 
   return (
     <>
@@ -53,7 +66,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
         <div className="p-4 flex flex-col flex-1">
           <h3 className="text-lg font-semibold">{name}</h3>
           <p className="text-sm text-gray-500">{categoryName}</p>
-          <p className="text-blue-600 font-bold text-xl mt-1">€{price}</p>
+          <p className="text-blue-600 font-bold text-xl mt-1">{formattedPrice}</p>
           <button 
             className="mt-4 text-sm bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" 
             onClick={() => setShowModal(true)}
@@ -79,7 +92,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
             <div className="md:w-2/3 p-6 overflow-y-auto max-h-[90vh] md:max-h-[unset]">
               <h2 className="text-2xl font-bold text-gray-800">{name}</h2>
               <p className="text-sm text-gray-500 mb-2">{categoryName}</p>
-              <p className="text-blue-600 font-bold text-2xl mb-4">€{price}</p>
+              <p className="text-blue-600 font-bold text-2xl mb-4">{formattedPrice}</p>
 
               <div className="mb-6">
                 <h3 className="text-lg font-semibold mb-2 text-gray-700">Beschrijving</h3>

@@ -63,9 +63,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Producten</h3>
             <ul className="space-y-2">
-              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Actieve Balans BMS</a></li>
-              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Standaard BMS</a></li>
-              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Accessoires</a></li>
+              <li><Link to="/products" className="text-gray-600 hover:text-blue-600">Actieve Balans BMS</Link></li>
+              <li><Link to="/products" className="text-gray-600 hover:text-blue-600">Standaard BMS</Link></li>
+              <li><Link to="/products" className="text-gray-600 hover:text-blue-600">Accessoires</Link></li>
             </ul>
           </div>
 

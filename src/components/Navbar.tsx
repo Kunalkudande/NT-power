@@ -8,9 +8,9 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "Products", path: "/products" },
-  { name: "About", path: "/about" },
+  { name: "Startpagina", path: "/" },
+  { name: "Producten", path: "/products" },
+  { name: "Over ons", path: "/about" },
 ];
 
 const Navbar: React.FC = () => {
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
         {/* Spacer */}
         <div className="flex-1" />
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <Link
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
           <Sheet>
             <SheetTrigger asChild>
               <button
-                aria-label="Open menu"
+                aria-label="Menu openen"
                 className="md:hidden p-2 text-gray-700"
               >
                 <svg
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
                   ))}
                   <Link to="/cart" className="flex items-center space-x-2 text-gray-700">
                     <ShoppingCart className="w-5 h-5" />
-                    <span>Cart ({cartCount})</span>
+                    <span>Winkelwagen ({cartCount})</span>
                   </Link>
                 </nav>
               </div>

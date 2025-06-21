@@ -30,8 +30,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
     addToCart(product);
     setIsInCart(true);
     toast({
-      title: "Added to cart",
-      description: `${name} has been added.`,
+      title: "Toegevoegd aan winkelwagen",
+      description: `${name} is toegevoegd.`,
       duration: 1000,
     });
   };
@@ -42,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
   };
 
   const imageSrc = images?.[0]?.src || "/placeholder.png";
-  const categoryName = categories?.[0]?.name || "Uncategorized";
+  const categoryName = categories?.[0]?.name || "Niet-gecategoriseerd";
 
   return (
     <>
@@ -58,7 +58,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
             className="mt-4 text-sm bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" 
             onClick={() => setShowModal(true)}
           >
-            Buy Now
+            Nu kopen
           </button>
         </div>
       </div>
@@ -82,13 +82,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
               <p className="text-blue-600 font-bold text-2xl mb-4">€{price}</p>
 
               <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-2 text-gray-700">Description</h3>
+                <h3 className="text-lg font-semibold mb-2 text-gray-700">Beschrijving</h3>
                 <div className="text-gray-600 prose prose-sm" dangerouslySetInnerHTML={{ __html: description }} />
               </div>
 
               {features && features.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-2 text-gray-700">Features</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-gray-700">Kenmerken</h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-1">
                     {features.map((feat, idx) => (
                       <li key={idx}>{feat}</li>
@@ -103,7 +103,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
                   onClick={handleAddToCart}
                 >
                   <ShoppingCart className="w-5 h-5" />
-                  <span>Add to Cart</span>
+                  <span>Voeg toe aan winkelwagen</span>
                 </button>
                 <button 
                   className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded transition-colors duration-200 ${
@@ -115,7 +115,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, autoOpen }) => {
                   disabled={!isInCart}
                 >
                   <CreditCard className="w-5 h-5" />
-                  <span>Checkout</span>
+                  <span>Afrekenen</span>
                 </button>
               </div>
             </div>

@@ -4,33 +4,34 @@ import { useLocation, Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const location = useLocation();
-  const currentPath = location.pathname === '/' ? 'Home' : location.pathname.substring(1);
+  const currentPath = location.pathname === '/' ? 'Startpagina' : location.pathname.substring(1);
 
   return (
     <footer className="bg-blue-50 border-t border-gray-200 mt-10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo and Info */}
+
+          {/* Logo en Info */}
           <div>
             <div className="flex items-center mb-4">
               <img
                 src="/lovable-uploads/BMS__1_-removebg-preview.png"
-                alt="Company 1 Logo"
+                alt="Bedrijfslogo 1"
                 className="h-8 mr-2"
               />
               <img
                 src="/lovable-uploads/collab-removebg-preview.png"
-                alt="Collaboration Icon"
+                alt="Samenwerking"
                 className="h-10 mx-2"
               />
               <img
                 src="/lovable-uploads/images-removebg-preview.png"
-                alt="Company 2 Logo"
+                alt="Bedrijfslogo 2"
                 className="h-10 ml-2"
               />
             </div>
             <p className="text-gray-600 mb-4">
-            NT-BMS (owned and operated by Naman Technologies BV) is an authorized reseller for Daly BMS products for the Netherlands.
+              NT-BMS (eigendom van en beheerd door Naman Technologies BV) is een geautoriseerde reseller van Daly BMS-producten voor Nederland.
             </p>
             <div className="flex space-x-4">
               {['facebook', 'twitter', 'instagram', 'linkedin'].map((icon, i) => (
@@ -58,38 +59,37 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Products */}
+          {/* Producten */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Products</h3>
+            <h3 className="text-lg font-bold mb-4">Producten</h3>
             <ul className="space-y-2">
-              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Active Balance BMS</a></li>
-              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Standard BMS</a></li>
-              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Accessories</a></li>
-              {/* <li><a href="#" className="text-gray-600 hover:text-blue-600">Customized Battery Packs</a></li> */}
+              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Actieve Balans BMS</a></li>
+              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Standaard BMS</a></li>
+              <li><a href="/products" className="text-gray-600 hover:text-blue-600">Accessoires</a></li>
             </ul>
           </div>
 
-          {/* Company Links */}
+          {/* Bedrijf Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Company</h3>
+            <h3 className="text-lg font-bold mb-4">Bedrijf</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-600 hover:text-blue-600">Home</Link></li>
-              <li><Link to="/about" className="text-gray-600 hover:text-blue-600">About Us</Link></li>
-              <li><Link to="/about#partnership" className="text-gray-600 hover:text-blue-600">Partnership</Link></li>
-              <li><Link to="/about#support" className="text-gray-600 hover:text-blue-600">Support</Link></li>
+              <li><Link to="/" className="text-gray-600 hover:text-blue-600">Startpagina</Link></li>
+              <li><Link to="/about" className="text-gray-600 hover:text-blue-600">Over ons</Link></li>
+              <li><Link to="/about#partnership" className="text-gray-600 hover:text-blue-600">Partnerschap</Link></li>
+              <li><Link to="/about#support" className="text-gray-600 hover:text-blue-600">Ondersteuning</Link></li>
             </ul>
           </div>
 
-          {/* Newsletter / Page Info */}
+          {/* Nieuwsbrief / Pagina Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Stay Updated</h3>
+            <h3 className="text-lg font-bold mb-4">Blijf op de hoogte</h3>
             <p className="text-gray-600 mb-4">
-              Current page: <span className="font-medium">{currentPath}</span>
+              Huidige pagina: <span className="font-medium">{currentPath}</span>
             </p>
             <div className="flex">
               <input
                 type="email"
-                placeholder="Email address"
+                placeholder="E-mailadres"
                 className="px-4 py-2 border border-gray-300 rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
               <button className="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600">
@@ -99,20 +99,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Footer */}
+        {/* Footer Onderin */}
         <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-600 mb-4 md:mb-0">
-            © 2025 NT-BMS. All rights reserved.
+            © 2025 NT-BMS. Alle rechten voorbehouden.
           </p>
           <div className="flex space-x-6">
-          <a href="https://www.nt-one.com/refunds-and-returns" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-blue-600">
-  Return Policy
-</a>
-<a href="https://www.nt-one.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-blue-600">
-  Privacy Policy
-</a>
-
-            {/* <a href="/terms-and-conditions" className="text-sm text-gray-600 hover:text-blue-600">Terms of Service</a> */}
+            <a href="https://www.nt-one.com/refunds-and-returns" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-blue-600">
+              Retourbeleid
+            </a>
+            <a href="https://www.nt-one.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-blue-600">
+              Privacybeleid
+            </a>
           </div>
         </div>
       </div>

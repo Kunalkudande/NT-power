@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
 import { fetchProducts } from '@/data/woocommerceserv';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 
-const topProductIds = [46,48, 55,52];
+const topProductIds = [46, 48, 55, 52];
 
 const TopProducts = () => {
   const [topProducts, setTopProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchTopProducts = async () => {
@@ -23,7 +23,7 @@ const TopProducts = () => {
         setTopProducts(filteredTopProducts);
       } catch (err: any) {
         console.error('Error fetching top products:', err);
-        setError('Failed to load top products');
+        setError('Laden van populairste producten mislukt');
       } finally {
         setLoading(false);
       }
@@ -33,19 +33,18 @@ const TopProducts = () => {
   }, []);
 
   const handleBuyNow = (productId: number) => {
-    // Navigate to the /products route with productId query param
     navigate(`/products?productId=${productId}`);
   };
 
-  if (loading) return <p>Loading top products...</p>;
+  if (loading) return <p>Populairste producten laden...</p>;
   if (error) return <p>{error}</p>;
 
   return (
     <section id="top-products" className="py-20 bg-blue-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Top Selling Products</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Best Verkochte Producten</h2>
         <p className="text-nt-medium-gray max-w-3xl mx-auto text-center mb-12">
-          DALY's most popular Battery Management Systems, designed for optimal performance and reliability
+          De populairste Battery Management Systems van DALY, ontworpen voor optimale prestaties en betrouwbaarheid
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -74,7 +73,7 @@ const TopProducts = () => {
 
                 <Button className="btn-primary w-full" onClick={() => handleBuyNow(product.id)}>
                   <ShoppingCart className="mr-2" size={16} />
-                  Buy Now
+                  Koop nu
                 </Button>
               </div>
             </div>

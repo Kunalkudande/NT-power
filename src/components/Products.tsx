@@ -15,7 +15,7 @@ const Products: React.FC = () => {
     const fetchProducts = async () => {
       try {
         const res = await fetch("http://localhost:3000/api/products");
-        if (!res.ok) throw new Error("Failed to fetch");
+        if (!res.ok) throw new Error("Ophalen mislukt");
         const data: Product[] = await res.json();
         setProducts(data);
         setFilteredProducts(data);
@@ -54,9 +54,9 @@ const Products: React.FC = () => {
       />
 
       <main className="lg:w-3/4 w-full">
-        <h1 className="text-3xl font-bold mb-6">Our Products</h1>
-        {loading && <p>Loading...</p>}
-        {error && <p className="text-red-600">Error: {error}</p>}
+        <h1 className="text-3xl font-bold mb-6">Onze Producten</h1>
+        {loading && <p>Laden...</p>}
+        {error && <p className="text-red-600">Fout: {error}</p>}
         {!loading && !error && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map(p => (
@@ -70,4 +70,3 @@ const Products: React.FC = () => {
 };
 
 export default Products;
-

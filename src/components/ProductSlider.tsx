@@ -4,7 +4,7 @@ import { ShoppingCart } from 'lucide-react';
 import { fetchProducts } from '@/data/woocommerceserv';
 import { useNavigate } from 'react-router-dom';
 
-const topProductIds = [44, 45, 76, 47,75,50, 77, 51, 79, 53, 54, 61];
+const topProductIds = [44, 45, 76, 47, 75, 50, 77, 51, 79, 53, 54, 61];
 
 const ProductSlider = () => {
   const [topProducts, setTopProducts] = useState<any[]>([]);
@@ -22,7 +22,7 @@ const ProductSlider = () => {
         setTopProducts(filteredTopProducts);
       } catch (err: any) {
         console.error('Error fetching top products:', err);
-        setError('Failed to load products');
+        setError('Laden van producten mislukt');
       } finally {
         setLoading(false);
       }
@@ -35,19 +35,18 @@ const ProductSlider = () => {
     navigate(`/products?productId=${productId}`);
   };
 
-  if (loading) return <p>Loading products...</p>;
+  if (loading) return <p>Producten laden...</p>;
   if (error) return <p>{error}</p>;
 
-  // Split products into two rows
   const firstRowProducts = topProducts.slice(0, 6);
   const secondRowProducts = topProducts.slice(6);
 
   return (
     <section id="top-products" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Other Products</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Andere Producten</h2>
         <p className="text-nt-medium-gray max-w-3xl mx-auto text-center mb-12">
-          DALY's popular Battery Management Systems with top-tier reliability and safety
+          Populaire Battery Management Systems van DALY met topklasse betrouwbaarheid en veiligheid
         </p>
 
         <div className="space-y-8">
@@ -70,7 +69,6 @@ const ProductSlider = () => {
   );
 };
 
-// Extracted for cleaner code
 const ProductCard = ({ product, handleBuyNow }: any) => (
   <div className="rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
     <div className="h-[100px] bg-white flex items-center justify-center">
@@ -88,7 +86,7 @@ const ProductCard = ({ product, handleBuyNow }: any) => (
         onClick={() => handleBuyNow(product.id)}
       >
         <ShoppingCart className="mr-1" size={14} />
-        Buy
+        Koop nu
       </Button>
     </div>
   </div>

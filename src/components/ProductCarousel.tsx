@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Product } from "@/types/product"; // Adjust the import as per your file structure
+import { Product } from "@/types/product";
 import ProductCard from "./ProductCard";
 
 interface ProductCarouselProps {
@@ -15,7 +15,6 @@ const ProductCarousel = ({ products, title }: ProductCarouselProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Extract all categories from the products
     const categorySet = new Set<string>();
     products.forEach((product) => {
       product.categories.forEach((category) => categorySet.add(category.name));
@@ -24,9 +23,8 @@ const ProductCarousel = ({ products, title }: ProductCarouselProps) => {
   }, [products]);
 
   useEffect(() => {
-    // Filter products based on selected categories
     if (selectedCategories.length === 0) {
-      setFilteredProducts(products); // Show all if no categories are selected
+      setFilteredProducts(products);
     } else {
       const filtered = products.filter((product) =>
         product.categories.some((cat) => selectedCategories.includes(cat.name))
@@ -35,7 +33,6 @@ const ProductCarousel = ({ products, title }: ProductCarouselProps) => {
     }
   }, [selectedCategories, products]);
 
-  // Function to handle category selection
   const handleCheckboxChange = (category: string) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
@@ -44,7 +41,6 @@ const ProductCarousel = ({ products, title }: ProductCarouselProps) => {
     );
   };
 
-  // Scroll function
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
       const scrollAmount = 300;
@@ -68,7 +64,7 @@ const ProductCarousel = ({ products, title }: ProductCarouselProps) => {
     <div className="flex gap-6 p-6">
       {/* Sidebar */}
       <aside className="w-1/4 bg-white p-4 rounded shadow">
-        <h2 className="text-xl font-bold mb-4">Categories</h2>
+        <h2 className="text-xl font-bold mb-4">Categorieën</h2>
         {allCategories.map((category) => (
           <label key={category} className="flex items-center mb-2 space-x-2">
             <input
@@ -90,7 +86,7 @@ const ProductCarousel = ({ products, title }: ProductCarouselProps) => {
           <button
             onClick={() => scroll("left")}
             className="absolute left-0 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
-            aria-label="Scroll left"
+            aria-label="Scroll naar links"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -104,7 +100,7 @@ const ProductCarousel = ({ products, title }: ProductCarouselProps) => {
           <button
             onClick={() => scroll("right")}
             className="absolute right-0 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
-            aria-label="Scroll right"
+            aria-label="Scroll naar rechts"
           >
             <ChevronRight className="w-5 h-5" />
           </button>

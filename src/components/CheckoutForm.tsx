@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { useCart } from "@/context/CartContext";
-import { createOrder } from "@/api/woocommerce"; // import your createOrder function
+import { createOrder } from "@/api/woocommerce";
 
 type FormData = {
   firstName: string;
@@ -46,7 +46,6 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmitOrder }) => {
 
   const handleCheckout = async () => {
     try {
-      // Step 1: Create the WooCommerce order
       const orderData = {
         payment_method: 'revolut',
         payment_method_title: 'Revolut',
@@ -55,7 +54,6 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmitOrder }) => {
           first_name: formData.firstName,
           last_name: formData.lastName,
           email: formData.email,
-          // ...other billing info
         },
         line_items: cartItems.map((item) => ({
           product_id: item.product.id,
@@ -64,11 +62,10 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmitOrder }) => {
         total: cartTotal.toString(),
       };
 
-      const order = await createOrder(orderData); // Create WooCommerce order
+      const order = await createOrder(orderData);
       const orderId = order.id;
       const amount = order.total;
 
-      // Step 2: Call your backend API to get the Revolut payment URL
       const response = await axios.post('https://your-backend-url/api/revolut/create-payment', {
         orderId,
         amount,
@@ -76,13 +73,11 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmitOrder }) => {
       });
 
       const paymentUrl = response.data.payment_url;
-
-      // Step 3: Redirect user to Revolut payment page
       window.location.href = paymentUrl;
 
     } catch (error) {
       console.error('Checkout failed:', error);
-      alert('Something went wrong during checkout. Please try again.');
+      alert('Er is iets misgegaan tijdens het afrekenen. Probeer het opnieuw.');
     }
   };
 
@@ -90,8 +85,8 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmitOrder }) => {
     e.preventDefault();
     try {
       const orderData = {
-        payment_method: "cod", // or change if needed
-        payment_method_title: "Cash on Delivery",
+        payment_method: "cod",
+        payment_method_title: "Contant bij levering",
         set_paid: false,
         billing: {
           first_name: formData.firstName,
@@ -124,26 +119,25 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmitOrder }) => {
       };
 
       const response = await createOrder(orderData);
-      alert("Order placed successfully! Order ID: " + response.id);
+      alert("Bestelling succesvol geplaatst! Bestelnummer: " + response.id);
       clearCart();
       onSubmitOrder(formData);
 
-      // Call handleCheckout after the order is created successfully
       handleCheckout();
     } catch (error) {
       console.error("Error creating order:", error);
-      alert("Failed to place order. Please try again.");
+      alert("Bestelling plaatsen mislukt. Probeer het opnieuw.");
     }
   };
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Checkout</h1>
+      <h1 className="text-3xl font-bold mb-8">Afrekenen</h1>
       <form onSubmit={handleSubmit}>
-        {/* Form Fields Here */}
+        {/* Add translated form fields here if needed */}
         <div className="flex justify-end">
           <button type="submit" className="bg-blue-600 text-white py-2 px-6 rounded-md">
-            Proceed to Payment
+            Doorgaan naar betaling
           </button>
         </div>
       </form>

@@ -22,11 +22,9 @@ const About = () => {
               About <span className="text-nt-red">NT Power</span>
             </h2>
             <p className="text-nt-medium-gray mb-6">
-              NT Power was established in 2015 with a mission to provide high-quality battery management solutions for various applications. As an authorized selling partner of DalyBMS, we combine technical expertise with exceptional customer service.
-            </p>
+NT Power werd opgericht in 2015 met de missie om hoogwaardige batterijbeheersystemen te leveren voor diverse toepassingen.Als geautoriseerde verkoopspartner van DalyBMS combineren we technische expertise met uitstekende klantenservice.            </p>
             <p className="text-nt-medium-gray mb-8">
-              Our team of experts specializes in energy storage systems, working closely with customers to deliver tailored solutions for their specific needs. From residential energy storage to industrial applications, NT Power is your trusted partner for all battery management requirements.
-            </p>
+Ons team van experts is gespecialiseerd in energieopslagsystemen en werkt nauw samen met klanten om oplossingen op maat te leveren voor hun specifieke behoeften.Van energieopslag voor woningen tot industriële toepassingen, NT Power is uw betrouwbare partner voor al uw behoeften op het gebied van batterijbeheer.            </p>
             
             {/* Key company values */}
             <div className="grid grid-cols-2 gap-6 mb-8">
@@ -53,8 +51,8 @@ const About = () => {
                   <Clock className="h-6 w-6 text-nt-red" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium mb-1">Fast Support</h4>
-                  <p className="text-nt-medium-gray text-sm">24/7 technical assistance</p>
+                  <h4 className="text-lg font-medium mb-1">Snelle ondersteuning</h4>
+                  <p className="text-nt-medium-gray text-sm">24/7 technische ondersteuning</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -62,15 +60,14 @@ const About = () => {
                   <Globe className="h-6 w-6 text-nt-red" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium mb-1">Global Shipping</h4>
-                  <p className="text-nt-medium-gray text-sm">Worldwide delivery</p>
+                  <h4 className="text-lg font-medium mb-1">Wereldwijde verzending</h4>
+                  <p className="text-nt-medium-gray text-sm">Wereldwijde levering</p>
                 </div>
               </div>
             </div>
             
             <Button variant="default" className="bg-nt-red hover:bg-nt-red/90 rounded-sm">
-              Learn More About Us
-            </Button>
+Lees meer over ons            </Button>
           </div>
           
           <div className="relative">
@@ -85,19 +82,19 @@ const About = () => {
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <div className="text-nt-red text-3xl font-bold mb-1">8+</div>
-                  <div className="text-nt-medium-gray text-sm">Years of Experience</div>
+                  <div className="text-nt-medium-gray text-sm">Jaren aan ervaring</div>
                 </div>
                 <div>
                   <div className="text-nt-red text-3xl font-bold mb-1">50+</div>
-                  <div className="text-nt-medium-gray text-sm">Team Members</div>
+                  <div className="text-nt-medium-gray text-sm">Teamleden</div>
                 </div>
                 <div>
                   <div className="text-nt-red text-3xl font-bold mb-1">15k+</div>
-                  <div className="text-nt-medium-gray text-sm">Units Sold</div>
+                  <div className="text-nt-medium-gray text-sm">Verkochte eenheden</div>
                 </div>
                 <div>
                   <div className="text-nt-red text-3xl font-bold mb-1">30+</div>
-                  <div className="text-nt-medium-gray text-sm">Countries Served</div>
+                  <div className="text-nt-medium-gray text-sm">Bediende landen</div>
                 </div>
               </div>
             </div>

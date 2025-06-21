@@ -14,8 +14,8 @@ const CategoryFilter = ({
 }: CategoryFilterProps) => {
   return (
     <div className="space-y-4">
-      <h2 className="text-lg font-semibold">Categories</h2>
-      
+      <h2 className="text-lg font-semibold">Categorieën</h2> {/* Translated */}
+
       <div className="space-y-2">
         {categories.map((category) => (
           <div key={category.id} className="flex items-center">
@@ -30,7 +30,7 @@ const CategoryFilter = ({
               htmlFor={`category-${category.id}`}
               className="ml-2 text-gray-700 cursor-pointer"
             >
-              {category.name}
+              {category.name} {/* Assume category.name is already localized */}
             </label>
           </div>
         ))}

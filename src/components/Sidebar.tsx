@@ -13,7 +13,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   return (
     <div className="bg-white shadow-md p-6 rounded-md">
-      <h2 className="text-xl font-bold mb-4">Filter by Categories</h2>
+      <h2 className="text-xl font-bold mb-4">Filter op categorieën</h2>
       <div className="space-y-4">
         {allCategories.map((category) => (
           <div key={category} className="flex items-center">

@@ -4,8 +4,7 @@ import { ShoppingCart } from 'lucide-react';
 import { fetchProducts } from '@/data/woocommerceserv';
 import { useNavigate } from 'react-router-dom';
 
-const accessoryProductIds = [111,112,113,114,115,116]; // Example IDs for accessories
-
+const accessoryProductIds = [111, 112, 113, 114, 115, 116]; // Example IDs for accessories
 
 const AccessoriesSlider = () => {
   const [accessoryProducts, setAccessoryProducts] = useState<any[]>([]);
@@ -23,7 +22,7 @@ const AccessoriesSlider = () => {
         setAccessoryProducts(filteredAccessoryProducts);
       } catch (err: any) {
         console.error('Error fetching accessory products:', err);
-        setError('Failed to load products');
+        setError('Laden van producten mislukt'); // Dutch
       } finally {
         setLoading(false);
       }
@@ -37,21 +36,20 @@ const AccessoriesSlider = () => {
   };
 
   const handleViewMore = () => {
-    navigate('/products'); // Redirect to the products page
+    navigate('/products');
   };
 
-  if (loading) return <p>Loading products...</p>;
+  if (loading) return <p>Producten laden...</p>; // Dutch
   if (error) return <p>{error}</p>;
 
   return (
     <section id="accessories-products" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Accessories</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Accessoires</h2>
         <p className="text-nt-medium-gray max-w-3xl mx-auto text-center mb-12">
-          Explore a range of high-quality accessories for your devices
+          Ontdek een assortiment hoogwaardige accessoires voor uw apparaten
         </p>
 
-        {/* Flex container for displaying the products */}
         <div className="flex gap-4 py-4 overflow-x-auto md:overflow-x-visible">
           {accessoryProducts.map((product) => (
             <div
@@ -74,21 +72,20 @@ const AccessoriesSlider = () => {
                   onClick={() => handleBuyNow(product.id)}
                 >
                   <ShoppingCart className="mr-1" size={14} />
-                  Buy
+                  Kopen
                 </Button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* View More Link */}
         <div className="text-center mt-6">
           <a
             href="#"
             onClick={handleViewMore}
             className="text-blue-600 hover:underline font-semibold"
           >
-            View More
+            Bekijk meer
           </a>
         </div>
       </div>

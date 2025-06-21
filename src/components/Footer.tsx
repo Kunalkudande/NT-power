@@ -75,8 +75,6 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><Link to="/" className="text-gray-600 hover:text-blue-600">Startpagina</Link></li>
               <li><Link to="/about" className="text-gray-600 hover:text-blue-600">Over ons</Link></li>
-              <li><Link to="/about#partnership" className="text-gray-600 hover:text-blue-600">Partnerschap</Link></li>
-              <li><Link to="/about#support" className="text-gray-600 hover:text-blue-600">Ondersteuning</Link></li>
             </ul>
           </div>
 

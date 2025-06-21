@@ -14,7 +14,7 @@ const createOrderInWooCommerce = async (orderDetails) => {
 
     return response.data;
   } catch (error) {
-    console.error('Error creating order:', error);
+    console.error('Fout bij het aanmaken van de bestelling:', error);
     throw error;
   }
 };

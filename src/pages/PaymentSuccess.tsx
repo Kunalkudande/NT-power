@@ -11,24 +11,19 @@ const PaymentSuccess: React.FC = () => {
   useEffect(() => {
     const verifyPayment = async () => {
       try {
-        // Get the pending order ID from localStorage
         const pendingOrderId = localStorage.getItem('pendingOrderId');
         setOrderId(pendingOrderId);
-        
+
         if (!pendingOrderId) {
           throw new Error('No pending order found');
         }
 
-        // Check payment status
         const status = await checkPaymentStatus(parseInt(pendingOrderId));
         setOrderStatus(status);
-        
-        // Clear the pending order from localStorage
+
         localStorage.removeItem('pendingOrderId');
-        
-        // If payment was successful, clear the cart
+
         if (status === 'processing' || status === 'completed') {
-          // Update order status to 'completed' in WooCommerce
           await updateOrderStatus(parseInt(pendingOrderId), 'completed');
         }
       } catch (error) {
@@ -50,7 +45,10 @@ const PaymentSuccess: React.FC = () => {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
-        <p className="mt-4 text-lg">Verifying your payment...</p>
+        <p className="mt-4 text-lg">
+          {/* Verifying your payment... */}
+          Betaling wordt gecontroleerd...
+        </p>
       </div>
     );
   }
@@ -64,8 +62,14 @@ const PaymentSuccess: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h1 className="text-3xl font-bold mb-4">Payment Successful!</h1>
-          <p className="text-lg mb-6">Thank you for your purchase. Your order #{orderId} has been confirmed.</p>
+          <h1 className="text-3xl font-bold mb-4">
+            {/* Payment Successful! */}
+            Betaling geslaagd!
+          </h1>
+          <p className="text-lg mb-6">
+            {/* Thank you for your purchase. Your order #{orderId} has been confirmed. */}
+            Bedankt voor uw aankoop. Uw bestelling #{orderId} is bevestigd.
+          </p>
         </>
       ) : (
         <>
@@ -74,16 +78,23 @@ const PaymentSuccess: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </div>
-          <h1 className="text-3xl font-bold mb-4">Payment Failed</h1>
-          <p className="text-lg mb-6">We couldn't process your payment. Please try again or contact customer support.</p>
+          <h1 className="text-3xl font-bold mb-4">
+            {/* Payment Failed */}
+            Betaling mislukt
+          </h1>
+          <p className="text-lg mb-6">
+            {/* We couldn't process your payment. Please try again or contact customer support. */}
+            We konden uw betaling niet verwerken. Probeer het opnieuw of neem contact op met de klantenservice.
+          </p>
         </>
       )}
-      
+
       <button 
         onClick={handleContinueShopping}
         className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
       >
-        Continue Shopping
+        {/* Continue Shopping */}
+        Verder winkelen
       </button>
     </div>
   );

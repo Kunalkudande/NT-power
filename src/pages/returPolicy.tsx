@@ -8,117 +8,107 @@ const ReturnPolicy: React.FC = () => {
       <Header />
       <div className="container mx-auto p-8 pt-24 max-w-4xl bg-white shadow-md rounded-lg">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
-          <h1 className="text-3xl font-bold mb-8">Return & Refund Policy</h1>
+          <h1 className="text-3xl font-bold mb-8">Retour- en Terugbetalingsbeleid</h1>
           
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Overview</h2>
+            <h2 className="text-2xl font-semibold mb-4">Overzicht</h2>
             <p className="mb-4">
-              Our refund and returns policy lasts 15 days from the date of delivery. If 15 days have passed since your purchase, 
-              unfortunately, we cannot offer you a full refund or exchange under standard circumstances.
+              Ons retour- en terugbetalingsbeleid is 15 dagen geldig vanaf de leverdatum. Als er 15 dagen zijn verstreken sinds uw aankoop, kunnen wij helaas geen volledige terugbetaling of omruiling aanbieden onder normale omstandigheden.
             </p>
             <p className="mb-4">
-              To be eligible for a return, your item must be unused and in the same condition that you received it. 
-              It must also be in the original packaging. Any damage, tampering, or misuse of the product will 
-              disqualify it from being eligible for return or refund.
+              Om in aanmerking te komen voor een retourzending, moet het artikel ongebruikt zijn en zich in dezelfde staat bevinden als waarin u het heeft ontvangen. Het moet ook in de originele verpakking zitten. Beschadiging, misbruik of knoeien met het product diskwalificeert het voor retournering of terugbetaling.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Non-Returnable Items</h2>
+            <h2 className="text-2xl font-semibold mb-4">Niet-retourneerbare Artikelen</h2>
             <ul className="list-disc pl-6 mb-4">
-              <li>Gift cards</li>
-              <li>Lease or rental amounts for completed months or billing cycles</li>
+              <li>Cadeaubonnen</li>
+              <li>Lease- of huurbedragen voor voltooide maanden of facturatiecycli</li>
             </ul>
             <p className="mb-4">
-              To process your return, a valid receipt or proof of purchase/lease/rental is mandatory.
+              Een geldig ontvangstbewijs of aankoop-/lease-/huurbewijs is vereist om uw retourzending te verwerken.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Partial Refunds</h2>
-            <p className="mb-4">Partial refunds may be granted in situations such as:</p>
+            <h2 className="text-2xl font-semibold mb-4">Gedeeltelijke Terugbetalingen</h2>
+            <p className="mb-4">Gedeeltelijke terugbetalingen kunnen worden verleend in situaties zoals:</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>The customer voluntarily cancels a lease/rental mid-term</li>
-              <li>The product is returned without any verified defect or malfunction</li>
+              <li>De klant annuleert vrijwillig een lease-/huurcontract halverwege</li>
+              <li>Het product wordt geretourneerd zonder een geverifieerd defect of storing</li>
             </ul>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Refund Process</h2>
+            <h2 className="text-2xl font-semibold mb-4">Terugbetalingsproces</h2>
             <p className="mb-4">
-              Once your return is received and inspected, we will send you an email to notify you that we have 
-              received your returned item. We will also notify you of the approval or rejection of your refund.
+              Zodra uw retourzending is ontvangen en geïnspecteerd, sturen wij u een e-mail om u te informeren dat wij uw geretourneerde artikel hebben ontvangen. We laten u ook weten of uw terugbetaling is goedgekeurd of afgewezen.
             </p>
             <p className="mb-4">
-              If approved, your refund will be processed, and a credit will automatically be applied to your 
-              original method of payment within 7–10 business days.
+              Als deze is goedgekeurd, wordt uw terugbetaling verwerkt en wordt er automatisch een tegoed toegepast op uw oorspronkelijke betaalmethode binnen 7–10 werkdagen.
             </p>
             <p className="mb-4">
-              Please note: The cost of return shipping will be borne by the customer.
+              Let op: De kosten voor retourzending zijn voor rekening van de klant.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Late or Missing Refunds</h2>
-            <p className="mb-4">If you haven't received your refund, please follow these steps:</p>
+            <h2 className="text-2xl font-semibold mb-4">Late of Ontbrekende Terugbetalingen</h2>
+            <p className="mb-4">Als u uw terugbetaling nog niet heeft ontvangen, volg dan deze stappen:</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>First, check your bank account again</li>
-              <li>Contact your credit card company—refunds may take time to reflect</li>
-              <li>Contact your bank—there is often some processing time before a refund is posted</li>
-              <li>If you've done all of this and still haven't received your refund, please contact us at Info@nt-one.com</li>
+              <li>Controleer eerst nogmaals uw bankrekening</li>
+              <li>Neem contact op met uw creditcardmaatschappij — terugbetalingen kunnen tijd kosten om te verschijnen</li>
+              <li>Neem contact op met uw bank — het kan enige verwerkingstijd kosten voordat een terugbetaling wordt geboekt</li>
+              <li>Als u dit allemaal heeft gedaan en uw terugbetaling nog steeds niet heeft ontvangen, neem dan contact met ons op via Info@nt-one.com</li>
             </ul>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Sale Items</h2>
+            <h2 className="text-2xl font-semibold mb-4">Uitverkoopartikelen</h2>
             <p className="mb-4">
-              Only regular priced items are eligible for refunds. Sale or discounted items cannot be refunded.
+              Alleen artikelen met een reguliere prijs komen in aanmerking voor terugbetaling. Uitverkoop- of afgeprijsde artikelen kunnen niet worden terugbetaald.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Exchanges</h2>
+            <h2 className="text-2xl font-semibold mb-4">Omruilingen</h2>
             <p className="mb-4">
-              We only replace items that are defective or damaged due to manufacturing or delivery issues.
+              We vervangen alleen artikelen die defect zijn of beschadigd zijn door fabricage- of leveringsproblemen.
             </p>
             <p className="mb-4">
-              To request an exchange, please email us at Info@nt-one.com with your order details. Our customer service team will provide you with further instructions and the return shipping address upon approval of your exchange request.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Gift Returns</h2>
-            <p className="mb-4">
-              If the item was marked as a gift when purchased and shipped directly to you, you'll receive a gift 
-              credit for the value of your return. Once the returned item is received, a gift certificate will be 
-              mailed to you.
-            </p>
-            <p className="mb-4">
-              If the item wasn't marked as a gift when purchased, or the gift giver had the order shipped to 
-              themselves to give to you later, we will send a refund to the gift giver and they will be notified 
-              about your return.
+              Om een omruiling aan te vragen, stuur ons een e-mail naar Info@nt-one.com met uw bestelgegevens. Ons klantenserviceteam zal u verdere instructies en het retouradres geven zodra uw verzoek is goedgekeurd.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Shipping Returns</h2>
+            <h2 className="text-2xl font-semibold mb-4">Cadeaus Retourneren</h2>
             <p className="mb-4">
-              To return your product, you will receive detailed return instructions and shipping address after contacting our customer service team.
+              Als het artikel als cadeau was gemarkeerd bij aankoop en rechtstreeks naar u is verzonden, ontvangt u een cadeaubon ter waarde van uw retourzending. Zodra het geretourneerde artikel is ontvangen, wordt de cadeaubon naar u toegestuurd.
+            </p>
+            <p className="mb-4">
+              Als het artikel niet als cadeau was gemarkeerd bij aankoop, of de gever het naar zichzelf heeft laten sturen om later te overhandigen, sturen wij de terugbetaling naar de gever en brengen we hem op de hoogte van uw retourzending.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Producten Retourneren</h2>
+            <p className="mb-4">
+              Om uw product te retourneren, ontvangt u gedetailleerde retourinstructies en het verzendadres nadat u contact hebt opgenomen met ons klantenserviceteam.
             </p>
             <ul className="list-disc pl-6 mb-4">
-              <li>You are responsible for paying the return shipping costs</li>
-              <li>Shipping costs are non-refundable</li>
-              <li>If you receive a refund, the return shipping charge will be deducted from your refund amount</li>
-              <li>For high-value returns, we recommend using a trackable shipping service or purchasing shipping insurance</li>
-              <li>We cannot guarantee receipt of your returned item without tracking information</li>
+              <li>U bent verantwoordelijk voor de verzendkosten van de retourzending</li>
+              <li>Verzendkosten worden niet terugbetaald</li>
+              <li>Als u een terugbetaling ontvangt, worden de verzendkosten van het teruggestuurde artikel afgetrokken</li>
+              <li>Voor dure producten raden we aan een traceerbare verzendservice te gebruiken of een verzendverzekering af te sluiten</li>
+              <li>We kunnen ontvangst van uw retourzending niet garanderen zonder trackinginformatie</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Need Help?</h2>
+            <h2 className="text-2xl font-semibold mb-4">Hulp Nodig?</h2>
             <p className="mb-4">
-              For any questions or concerns about returns, refunds, or exchanges, please contact our customer 
-              service team at Info@nt-one.com or call us at +91 80878 88666.
+              Voor vragen of opmerkingen over retourzendingen, terugbetalingen of omruilingen kunt u contact opnemen met ons klantenserviceteam via Info@nt-one.com of bel ons op +91 80878 88666.
             </p>
           </section>
         </div>

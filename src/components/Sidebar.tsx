@@ -6,6 +6,12 @@ interface SidebarProps {
   onCategoryChange: (category: string) => void;
 }
 
+const categoryNameMap: Record<string, string> = {
+  "Accessories": "Accessoires",
+  "Active Balance BMS": "Actieve Balans BMS",
+  "Standard BMS": "Standaard BMS",
+};
+
 const Sidebar: React.FC<SidebarProps> = ({
   allCategories,
   selectedCategories,
@@ -25,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               className="mr-2"
             />
             <label htmlFor={category} className="text-lg">
-              {category}
+              {categoryNameMap[category] || category}
             </label>
           </div>
         ))}

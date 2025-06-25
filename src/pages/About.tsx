@@ -45,7 +45,7 @@ const About = () => {
               <img
                 src="lovable-uploads/images.png"
                 alt="Daly BMS Partnerschap"
-                className="w-32 h-32 object-contain mb-4"
+                className="w-43 h-43 object-contain mb-4"
               />
               <h2 className="text-2xl font-bold text-blue-800 mb-2">🤝 Officiële Daly Partner</h2>
               <p className="text-base text-gray-700">

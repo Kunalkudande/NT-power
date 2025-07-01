@@ -15,7 +15,7 @@ const Hero = () => {
             muted
             playsInline
           >
-            <source src="lovable-uploads/webm.webm" type="video/webm" />
+            <source src="lovable-uploads/video.mp4" type="video/mp4" />
             Uw browser ondersteunt het video-element niet.
             <img 
               src="public/lovable-uploads/cb8f4d3a-5504-4847-85ec-bd12464dbc22.png"

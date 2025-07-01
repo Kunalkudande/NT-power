@@ -53,7 +53,7 @@ export const processRevolutPayment = async (orderId: number, amount: number, cus
       customerEmail,
     };
 
-    const response = await axios.post('https://nt-bms-backend.onrender.com/api/revolut/create-order', paymentData);
+    const response = await axios.post('https://revolut-payment.onrender.com/api/revolut/create-order', paymentData);
 
     // Extract the checkout URL from the backend response
     const checkoutUrl = response.data.checkoutUrl;
